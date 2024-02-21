@@ -1,12 +1,13 @@
-allow_embedding: false
-package_name: Budgiet
-name: Budgiet
-startup_form: Form1
-native_deps: {head_html: '<link href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;600&family=Roboto+Condensed:wght@300;400;700&display=swap"
-    rel="stylesheet" rel="preload" as="font" crossorigin="anonymous">'}
-runtime_options: {version: 2, client_version: '3', server_version: python3-full, server_spec: null}
-metadata: {title: Budgiet, logo_img: 'asset:Screenshot 2024-02-20 163256.png'}
 services:
 - source: /runtime/services/tables.yml
   client_config: {}
   server_config: {}
+startup: {type: form, module: Dashboard}
+package_name: Budgiet
+allow_embedding: false
+name: Budgiet
+runtime_options: {version: 2, client_version: '3', server_version: python3-full, server_spec: null}
+metadata: {title: Budgiet, logo_img: 'asset:Screenshot 2024-02-20 163256.png'}
+startup_form: null
+native_deps: {head_html: '<link href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;600&family=Roboto+Condensed:wght@300;400;700&display=swap"
+    rel="stylesheet" rel="preload" as="font" crossorigin="anonymous">'}
