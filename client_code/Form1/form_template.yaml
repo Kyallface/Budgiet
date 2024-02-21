@@ -7,4 +7,68 @@ components:
   properties: {col_widths: '{}'}
   name: column_panel_1
   layout_properties: {slot: default}
-  components: []
+  components:
+  - name: card_3
+    properties: {role: card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'PBBHVM,MTEQIW'}
+  - name: mascot_panel
+    properties: {role: card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'WFAPAL,KHSOXT'}
+    components:
+    - name: mascot_image
+      properties: {height: 137.1328125}
+      type: Image
+      layout_properties: {grid_position: 'RXTLOL,KZJIZK'}
+    - name: Mascot_text_area1
+      properties: {}
+      type: TextArea
+      layout_properties: {grid_position: 'RXTLOL,KXQRFH'}
+  - name: dashboard_panel
+    properties: {role: card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'EKXYHK,CLAVAU'}
+    components:
+    - name: dashboard_period_drop
+      properties: {}
+      type: DropDown
+      layout_properties: {grid_position: 'WEFTZH,WQXFRU'}
+    - name: dash_month_drop
+      properties: {}
+      type: DropDown
+      layout_properties: {grid_position: 'WEFTZH,OOFBNY'}
+    - name: dash_year_drop
+      properties: {}
+      type: DropDown
+      layout_properties: {grid_position: 'WEFTZH,UAKLYT'}
+    - name: plot_1
+      properties: {}
+      type: Plot
+      layout_properties: {grid_position: 'RLICKY,IPHJST'}
+  - name: card_1
+    properties: {role: card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'BWSRLE,QUBKIL'}
+    components:
+    - name: data_grid_1
+      properties:
+        columns:
+        - {id: JKSDUP, title: Column 1, data_key: column_1}
+        - {id: VJQQOR, title: Column 2, data_key: column_2}
+        - {id: OJLQEN, title: Column 3, data_key: column_3}
+      type: DataGrid
+      components:
+      - name: repeating_panel_1
+        properties: {item_template: Form1.RowTemplate1}
+        type: RepeatingPanel
+      layout_properties: {grid_position: 'AWJCYE,NREZTS'}
+  - name: card_2
+    properties: {role: card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'BWSRLE,VGETXZ'}
+    components:
+    - name: plot_2
+      properties: {}
+      type: Plot
+      layout_properties: {grid_position: 'EHRYNX,NRCYLN'}
