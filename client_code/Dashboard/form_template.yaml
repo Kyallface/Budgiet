@@ -22,7 +22,7 @@ components:
       type: Image
       layout_properties: {grid_position: 'RXTLOL,KZJIZK'}
     - name: Mascot_text_area1
-      properties: {}
+      properties: {text: I'm going to say something funny and interesting}
       type: TextArea
       layout_properties: {grid_position: 'RXTLOL,KXQRFH'}
   - name: dashboard_panel
@@ -42,7 +42,7 @@ components:
       properties: {}
       type: DropDown
       layout_properties: {grid_position: 'WEFTZH,UAKLYT'}
-    - name: plot_1
+    - name: dash_float_plot
       properties: {}
       type: Plot
       layout_properties: {grid_position: 'RLICKY,IPHJST'}
@@ -51,7 +51,7 @@ components:
     type: ColumnPanel
     layout_properties: {grid_position: 'BWSRLE,QUBKIL'}
     components:
-    - name: data_grid_1
+    - name: dash_transaction_grid
       properties:
         columns:
         - {id: JKSDUP, title: Column 1, data_key: column_1}
@@ -68,7 +68,7 @@ components:
     type: ColumnPanel
     layout_properties: {grid_position: 'BWSRLE,VGETXZ'}
     components:
-    - name: plot_2
+    - name: dash_category_plot
       properties: {}
       type: Plot
       layout_properties: {grid_position: 'EHRYNX,NRCYLN'}
