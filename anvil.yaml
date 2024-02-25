@@ -2,7 +2,69 @@ services:
 - source: /runtime/services/tables.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: Dashboard}
+- source: /runtime/services/google.yml
+  client_config:
+    app_files:
+    - capabilities: {canEdit: true, canCopy: true}
+      editable: true
+      copyable: true
+      embedLink: https://docs.google.com/spreadsheets/d/1u-M5vxjmODVXU_uzj_Lyoe_Mlw6Bn3THs9r1ydPbqKk/htmlembed?ouid=115322680418270650380
+      copyRequiresWriterPermission: false
+      python_name: budgietlinkedsheet
+      explicitlyTrashed: false
+      lastModifyingUser:
+        displayName: Kyall Fordham-weir
+        kind: drive#user
+        isAuthenticatedUser: true
+        permissionId: '13350088360763772365'
+        emailAddress: kfordhamweir@gmail.com
+        picture: {url: 'https://lh3.googleusercontent.com/a/ACg8ocIXlZ5N6V9W2lDbygQJMZrf1NxtJUFpYgUcHthAmvBNo3n3=s64'}
+      shared: false
+      createdDate: '2024-02-25T08:57:05.416Z'
+      id: 1u-M5vxjmODVXU_uzj_Lyoe_Mlw6Bn3THs9r1ydPbqKk
+      owners:
+      - displayName: Kyall Fordham-weir
+        kind: drive#user
+        isAuthenticatedUser: true
+        permissionId: '13350088360763772365'
+        emailAddress: kfordhamweir@gmail.com
+        picture: {url: 'https://lh3.googleusercontent.com/a/ACg8ocIXlZ5N6V9W2lDbygQJMZrf1NxtJUFpYgUcHthAmvBNo3n3=s64'}
+      markedViewedByMeDate: '1970-01-01T00:00:00.000Z'
+      spaces: [drive]
+      parents:
+      - {selfLink: 'https://www.googleapis.com/drive/v2/files/1u-M5vxjmODVXU_uzj_Lyoe_Mlw6Bn3THs9r1ydPbqKk/parents/0AM5uFVElUruzUk9PVA',
+        id: 0AM5uFVElUruzUk9PVA, isRoot: true, kind: drive#parentReference, parentLink: 'https://www.googleapis.com/drive/v2/files/0AM5uFVElUruzUk9PVA'}
+      labels: {viewed: true, restricted: false, starred: false, hidden: false, trashed: false}
+      iconLink: https://drive-thirdparty.googleusercontent.com/16/type/application/vnd.google-apps.spreadsheet
+      permission: rwclient
+      selfLink: https://www.googleapis.com/drive/v2/files/1u-M5vxjmODVXU_uzj_Lyoe_Mlw6Bn3THs9r1ydPbqKk
+      lastViewedByMeDate: '2024-02-25T08:57:25.092Z'
+      userPermission: {id: me, type: user, role: owner, kind: drive#permission, selfLink: 'https://www.googleapis.com/drive/v2/files/1u-M5vxjmODVXU_uzj_Lyoe_Mlw6Bn3THs9r1ydPbqKk/permissions/me',
+        etag: '"9e-Manr7GdbfT2w66rs5KjayDpM"', pendingOwner: false}
+      lastModifyingUserName: Kyall Fordham-weir
+      etag: '"MTcwODg1MTQ0NTA5Mg"'
+      kind: drive#file
+      modifiedByMeDate: '2024-02-25T08:57:25.092Z'
+      title: BudgietLinkedSheet
+      version: '6'
+      appDataContents: false
+      writersCanShare: true
+      fileSize: '1'
+      alternateLink: https://docs.google.com/spreadsheets/d/1u-M5vxjmODVXU_uzj_Lyoe_Mlw6Bn3THs9r1ydPbqKk/edit?usp=drivesdk
+      mimeType: application/vnd.google-apps.spreadsheet
+      modifiedDate: '2024-02-25T08:57:25.092Z'
+      quotaBytesUsed: '1'
+      exportLinks: {x-vnd.oasis.opendocument.spreadsheet: 'https://docs.google.com/spreadsheets/export?id=1u-M5vxjmODVXU_uzj_Lyoe_Mlw6Bn3THs9r1ydPbqKk&exportFormat=ods',
+        tab-separated-values: 'https://docs.google.com/spreadsheets/export?id=1u-M5vxjmODVXU_uzj_Lyoe_Mlw6Bn3THs9r1ydPbqKk&exportFormat=tsv',
+        pdf: 'https://docs.google.com/spreadsheets/export?id=1u-M5vxjmODVXU_uzj_Lyoe_Mlw6Bn3THs9r1ydPbqKk&exportFormat=pdf',
+        vnd.openxmlformats-officedocument.spreadsheetml.sheet: 'https://docs.google.com/spreadsheets/export?id=1u-M5vxjmODVXU_uzj_Lyoe_Mlw6Bn3THs9r1ydPbqKk&exportFormat=xlsx',
+        csv: 'https://docs.google.com/spreadsheets/export?id=1u-M5vxjmODVXU_uzj_Lyoe_Mlw6Bn3THs9r1ydPbqKk&exportFormat=csv',
+        zip: 'https://docs.google.com/spreadsheets/export?id=1u-M5vxjmODVXU_uzj_Lyoe_Mlw6Bn3THs9r1ydPbqKk&exportFormat=zip',
+        vnd.oasis.opendocument.spreadsheet: 'https://docs.google.com/spreadsheets/export?id=1u-M5vxjmODVXU_uzj_Lyoe_Mlw6Bn3THs9r1ydPbqKk&exportFormat=ods'}
+      thumbnailLink: https://lh3.googleusercontent.com/drive-storage/ANtge_H1ZnWOJMOcjxH_Z9KmnZNtB6BfMFcYgmq6uRLgxyBwL3xr9-IJv_E-bWJ6a9xTFGXa_T9CX2Msb5NRYwjaydHiXiRtQp3VsOIueMvIIk4Ft1p2FcwPglEg=s220
+      ownerNames: [Kyall Fordham-weir]
+  server_config: {enc_delegation_refresh_token: c9QEEA6NqemyWsBPPihWJCRbR4pTttIS+HlIY4qNPI9H4u5ln/fTYxXoqWxQFm/Zsf/1qB9s3tS0eKGrPV/AfynNva1OF9WBDLqxhkFvEDzYmjyal7HFqj9ueINqjAOEtA20QUYnN5KHTezT7e7VCjs5amDOWv0UZeDoIjDFWHX864hOVLKSQc3JmuVIBjRMe8y3Iy4qXTE2O1g6DAT1dNMU5pHpo3UOQy6++bhaW2r8pvkXmZ5L7OkogxRwIzvkrjtYRPDIiO6oGQvkh1m+WlHgb1lKOCg/VzlsU0/MRklwoc2tWZLWS79igOMV4g==}
+startup: {type: module, module: GoogleSheetsIntegration}
 package_name: Budgiet
 allow_embedding: false
 name: Budgiet
