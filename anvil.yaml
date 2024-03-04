@@ -64,7 +64,7 @@ services:
       thumbnailLink: https://lh3.googleusercontent.com/drive-storage/ANtge_H1ZnWOJMOcjxH_Z9KmnZNtB6BfMFcYgmq6uRLgxyBwL3xr9-IJv_E-bWJ6a9xTFGXa_T9CX2Msb5NRYwjaydHiXiRtQp3VsOIueMvIIk4Ft1p2FcwPglEg=s220
       ownerNames: [Kyall Fordham-weir]
   server_config: {enc_delegation_refresh_token: c9QEEA6NqemyWsBPPihWJCRbR4pTttIS+HlIY4qNPI9H4u5ln/fTYxXoqWxQFm/Zsf/1qB9s3tS0eKGrPV/AfynNva1OF9WBDLqxhkFvEDzYmjyal7HFqj9ueINqjAOEtA20QUYnN5KHTezT7e7VCjs5amDOWv0UZeDoIjDFWHX864hOVLKSQc3JmuVIBjRMe8y3Iy4qXTE2O1g6DAT1dNMU5pHpo3UOQy6++bhaW2r8pvkXmZ5L7OkogxRwIzvkrjtYRPDIiO6oGQvkh1m+WlHgb1lKOCg/VzlsU0/MRklwoc2tWZLWS79igOMV4g==}
-startup: {type: module, module: GoogleSheetsIntegration}
+startup: {type: form, module: Dashboard}
 package_name: Budgiet
 allow_embedding: false
 name: Budgiet
