@@ -59,8 +59,8 @@ components:
     - name: dash_transaction_grid
       properties:
         columns:
-        - {id: JKSDUP, title: Name, data_key: name, expand: false, width: 95.59765625}
-        - {id: VJQQOR, title: Address, data_key: address}
+        - {id: JKSDUP, title: name, data_key: name, expand: false, width: 95.59765625}
+        - {id: VJQQOR, title: address, data_key: address}
         auto_header: true
       type: DataGrid
       components:
@@ -68,7 +68,8 @@ components:
         properties: {item_template: Dashboard.RowTemplate1}
         type: RepeatingPanel
         data_bindings:
-        - {property: items, code: 'self.item['''']', writeback: false}
+        - {property: items, code: 'self.item[''address'']', writeback: false}
+        layout_properties: {}
       layout_properties: {grid_position: 'AWJCYE,NREZTS'}
       data_bindings: []
   - name: card_2
