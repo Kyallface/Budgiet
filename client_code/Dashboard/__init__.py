@@ -12,15 +12,14 @@ class Dashboard(DashboardTemplate):
         # Set Form properties and Data Bindings.
          #Load the googlesheet
         transaction_data = gSheet.GetData()
-        self.dash_transaction_grid  =[
-        {'name': 'Alice', 'address': '1 Road Street'},
-        {'name': 'Bob', 'address': '2 City Town'}
-        ]
+        anvil.server.call('getDataFrame', transaction_data)
+        
 
       #  [<Google Worksheet Row: {'TransactionID': '1', 'Date': '01/01/2024', 'Expense': 'McDonalds', 'Value': '£17.39', 'Catagory': 'Eating Out'}>, <Google Worksheet Row: {'TransactionID': '2', 'Date': '02/01/2024', 'Expense': 'Tesco', 'Value': '£62.05', 'Catagory': 'Weekly Shop'}>
 
         self.init_components(**properties)
+        self.dash_transaction_repeating.items = transaction_data.rows
 
 
-
+    
         # Any code you write here will run before the form opens.

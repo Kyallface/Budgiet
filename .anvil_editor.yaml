@@ -6,6 +6,7 @@ unique_ids:
     GoogleSheetsIntegration: '1708851080892347842813699.51373'
   server_modules:
     Anvil_Logging: '1709279536890279037946810.915'
+    Plotter: '1710175196701853578945941.7338'
   assets:
     Screenshot 2024-02-20 163256.png: '1708447116761800114534735.7515'
     standard-page.html: E2ATKXQ3N4RG5ETYYHDFOFVJCOXIS76R

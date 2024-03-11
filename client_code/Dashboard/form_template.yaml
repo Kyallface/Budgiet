@@ -59,8 +59,9 @@ components:
     - name: dash_transaction_grid
       properties:
         columns:
-        - {id: JKSDUP, title: name, data_key: name, expand: false, width: 95.59765625}
-        - {id: VJQQOR, title: address, data_key: address}
+        - {id: JKSDUP, title: Date, data_key: Date, expand: false, width: 95.59765625}
+        - {id: VJQQOR, title: Expense, data_key: Expense}
+        - {id: SUMTDE, data_key: Value, title: Value}
         auto_header: true
       type: DataGrid
       components:
