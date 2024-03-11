@@ -12,7 +12,7 @@ class Dashboard(DashboardTemplate):
         # Set Form properties and Data Bindings.
          #Load the googlesheet
         transaction_data = gSheet.GetData()
-        self.dash_transaction_repeating.items  =[
+        self.dash_transaction_grid  =[
         {'name': 'Alice', 'address': '1 Road Street'},
         {'name': 'Bob', 'address': '2 City Town'}
         ]
