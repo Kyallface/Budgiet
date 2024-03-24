@@ -12,14 +12,14 @@ class Dashboard(DashboardTemplate):
         # Set Form properties and Data Bindings.
          #Load the googlesheet
         transaction_data = gSheet.GetData()
-        anvil.server.call('getDataFrame', transaction_data)
+        startdate = '2024-02-01'
+        endDate = '2024-02-29'
         
-
-      #  [<Google Worksheet Row: {'TransactionID': '1', 'Date': '01/01/2024', 'Expense': 'McDonalds', 'Value': '£17.39', 'Catagory': 'Eating Out'}>, <Google Worksheet Row: {'TransactionID': '2', 'Date': '02/01/2024', 'Expense': 'Tesco', 'Value': '£62.05', 'Catagory': 'Weekly Shop'}>
-
+        
+        
         self.init_components(**properties)
+        #Setup the table of transations: 
         self.dash_transaction_repeating.items = transaction_data.rows
 
-
-    
-        # Any code you write here will run before the form opens.
+        #Setup the category plot 
+        self.dash_category_plot.figure=anvil.server.call('getCatagoryPlot', transaction_data.rows, startdate, endDate)

@@ -10,10 +10,10 @@ gSheetData = app_files.budgietlinkedsheet
 gWorksheet = gSheetData["Transactions"]
 
 #print the basic information about the spreadsheet to confirm we are loaded correctly 
-anvil.server.call('log', gSheetData)
-anvil.server.call('log', gWorksheet)
-anvil.server.call('log', gWorksheet.fields)
-anvil.server.call('log', gWorksheet.row_count)
+#anvil.server.call('log', gSheetData)
+#anvil.server.call('log', gWorksheet)
+#anvil.server.call('log', gWorksheet.fields)
+#anvil.server.call('log', gWorksheet.row_count)
 
 def GetData(): 
     return gWorksheet
