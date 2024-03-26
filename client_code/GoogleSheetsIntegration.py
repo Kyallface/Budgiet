@@ -15,6 +15,9 @@ gWorksheet = gSheetData["Transactions"]
 #anvil.server.call('log', gWorksheet.fields)
 #anvil.server.call('log', gWorksheet.row_count)
 
-def GetData(): 
+def GetAllData(): 
     return gWorksheet
+
+def SearchData():
+    
 

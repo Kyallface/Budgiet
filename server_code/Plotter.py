@@ -20,8 +20,10 @@ def getDataFrame(data):
 
 @anvil.server.callable
 def getCatagoryPlot(importData, datestart, dateend):
+    datestart = pd.to_datetime(datestart)
+    dateend = pd.to_datetime(dateend)
     dFrame = getDataFrame(importData)
-    dFrame = dFrame[(dFrame['Date'] >= datestart) & (dFrame['Date'] <= dateend)]
+    dFrame = dFrame[(dFrame['Date'] >= datestart) & (dFrame['Date'] <= dateend)]  # Parentheses added here
 
 
     #print(dFrame.head())
