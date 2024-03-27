@@ -15,6 +15,7 @@ class Dashboard(DashboardTemplate):
          #Load the googlesheet
         transaction_data = gSheet.GetAllData()
         
+        
         #Setup the Dropdowns
         self.dash_year_drop.items = ['2024', '2025','2026']
         self.dash_month_drop.items = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'September', 'October', 'November', 'December']
@@ -25,18 +26,27 @@ class Dashboard(DashboardTemplate):
         #Set the default value on the dropdowns to today
         self.dash_year_drop.selected_value = str(today.year)
         self.dash_month_drop.selected_value = datetime.datetime.strftime(today, "%B")
+        #Get the values for the purpose of intiial dating on the data 
+        dataStartDate = dConverter.getStartDate(self.dash_year_drop.selected_value, self.dash_month_drop.selected_value)
+        dataEndDate = dConverter.getEndDate(self.dash_year_drop.selected_value, self.dash_month_drop.selected_value)
         
         
         self.init_components(**properties)
-        #Setup the table of transations: 
-        self.dash_transaction_repeating.items = transaction_data.rows
-        self.dash_transaction_repeating.
+        #Setup the table of transations
+        #Get all of the googlesheet data
+        
+        
+        DatedData = gSheet.GetDatedData(dataStartDate, dataEndDate)
+        self.dash_transaction_repeating.items = sorted(DatedData, key=lambda row:row['Date'])
+        
         
 
         #Setup the category plot 
-        plotStartDate = dConverter.getStartDate(self.dash_year_drop.selected_value, self.dash_month_drop.selected_value)
-        plotEndDate = dConverter.getEndDate(self.dash_year_drop.selected_value, self.dash_month_drop.selected_value)
-        self.dash_category_plot.figure=anvil.server.call('getCatagoryPlot', transaction_data.rows, plotStartDate, plotEndDate)
+        #Call the method to setup the plot using the start and end dates
+        self.dash_category_plot.figure=anvil.server.call('getCatagoryPlot', transaction_data.rows, dataStartDate, dataEndDate)
+
+        #Setup the Float Plot
+        self.dash_float_plot.figure=anvil.server.call('GetFloatPlot', transaction_data.rows,dataStartDate, dataEndDate)
 
 
 

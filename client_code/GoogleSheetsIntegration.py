@@ -2,6 +2,7 @@
 # It can read in the data, add, edit and delete. 
 import anvil.server
 import anvil.google.auth, anvil.google.drive
+from  datetime import datetime
 from anvil.google.drive import app_files
 
 
@@ -18,6 +19,18 @@ gWorksheet = gSheetData["Transactions"]
 def GetAllData(): 
     return gWorksheet
 
-def SearchData():
-    
 
+def GetDatedData(start_date, end_date):
+    dated_data = []
+    for row in gWorksheet.rows:
+        row_date_str = row['Date']  # Assuming 'Date' is a column in your worksheet
+        row_date = datetime.strptime(row_date_str, '%d/%m/%Y').date()  # Corrected date format
+        if start_date <= row_date <= end_date:
+            dated_data.append(row)
+    return dated_data
+
+
+
+
+    
+    

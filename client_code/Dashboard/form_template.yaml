@@ -63,6 +63,7 @@ components:
         - {id: VJQQOR, title: Expense, data_key: Expense}
         - {id: SUMTDE, data_key: Value, title: Value}
         auto_header: true
+        rows_per_page: 10
       type: DataGrid
       components:
       - name: dash_transaction_repeating
