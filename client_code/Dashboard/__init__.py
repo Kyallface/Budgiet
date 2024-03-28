@@ -6,6 +6,7 @@ from anvil.google.drive import app_files
 import plotly.graph_objects as go
 from .. import GoogleSheetsIntegration as gSheet
 from .. import DateConverter as dConverter
+from .. import GPTIntegration as gpt
 import datetime
 
 
@@ -47,6 +48,8 @@ class Dashboard(DashboardTemplate):
 
         #Setup the Float Plot
         self.dash_float_plot.figure=anvil.server.call('GetFloatPlot', transaction_data.rows,dataStartDate, dataEndDate)
+
+        self.Mascot_text_area1.text = gpt.get_Message()
 
 
 
