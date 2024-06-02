@@ -6,7 +6,7 @@ from anvil.google.drive import app_files
 import plotly.graph_objects as go
 from .. import GoogleSheetsIntegration as gSheet
 from .. import DateConverter as dConverter
-from .. import GPTIntegration as gpt
+#from .. import GPTIntegration as gpt
 import datetime
 
 
